@@ -1,0 +1,21 @@
+O BubbleSort é um algoritmo de ordenação dos mais simples. A ideia e flutuar pelo vetor várias vezes e por cada passagem, fazer flutuar para o topo o maior elemento de sequência;
+Pior caso : O(n²);
+A complexidade desse algorimo é de ordem quadrática.
+
+Seu pseudocódigo (Pascal)
+procedure bubbleSort( A : lista de itens ordenaveis ) defined as:
+  do
+    trocado := false
+    for each i in 0 to length( A ) - 2 do:
+      // verificar se os elementos estão na ordem certa
+      if A[ i ] > A[ i + 1 ] then
+        // trocar elementos de lugar
+        trocar( A[ i ], A[ i + 1 ] )
+        trocado := true
+      end if
+    end for
+  // enquanto houver elementos sendo reordenados.
+  while trocado
+end procedure
+
+fonte: https://pt.wikipedia.org/wiki/Bubble_sort
