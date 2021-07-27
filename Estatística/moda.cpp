@@ -1,14 +1,12 @@
 #include <iostream>
 
+//Moda de uma variável discreta
 float moda_result(int observacoes)
 {
 	int n = 0;
 	float moda[n] = {};
 	int c[n];
 	int i, j, m, cont, obs;
-	
-	// a correposnde a obs
-	// obs corresponde a observações
 	
 	cont = 0;
 	std::cout << "Quantos números possui a lista " << std::endl;
