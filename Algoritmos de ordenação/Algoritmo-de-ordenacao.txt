@@ -19,3 +19,67 @@ procedure bubbleSort( A : lista de itens ordenaveis ) defined as:
 end procedure
 
 fonte: https://pt.wikipedia.org/wiki/Bubble_sort
+
+QuickSort
+
+procedimento QuickSort(X[], IniVet, FimVet)
+var
+   i, j, pivo, aux
+início
+   i <- IniVet
+   j <- FimVet
+   pivo <- X[(IniVet + FimVet) div 2]
+   enquanto(i <= j)
+    |      enquanto (X[i] < pivo) faça
+    |       |   i <- i + 1
+    |      fimEnquanto
+    |      enquanto (X[j] > pivo) faça
+    |       |   j <- j - 1
+    |      fimEnquanto
+    |      se (i <= j) então
+    |       |   aux  <- X[i]
+    |       |   X[i] <- X[j]
+    |       |   X[j] <- aux
+    |       |   i <- i + 1
+    |       |   j <- j - 1
+    |      fimSe
+   fimEnquanto
+   se (IniVet < j) então
+    |  QuickSort(X, IniVet, j)
+   fimSe
+   se (i < FimVet) então
+    |  QuickSort(X, i, FimVet)
+   fimSe
+fimProcedimento
+
+Outra maneira de fazer o QuickSort
+
+algorithm quicksort(A, lo, hi) is
+    if lo < hi then
+        p := particiona(A, lo, hi)
+        quicksort(A, lo, p – 1)
+        quicksort(A, p + 1, hi)
+
+algorithm particiona(A, lo, hi) is
+    pivot := A[hi]
+    i := lo - 1    
+    for j := lo to hi - 1 do
+        if A[j] < pivot then
+            i := i + 1
+            swap A[i] with A[j]
+    if pivot < A[i + 1] then
+        swap A[i + 1] with A[hi]
+    return i + 1
+
+O bucketSort é outro  algorito de ordenação interessantíssimo
+
+function bucketSort(array, k) is
+    buckets ← new array of k empty lists
+    M ← the maximum key value in the array
+    for i = 1 to length(array) do
+        insert array[i] into buckets[floor(k × array[i] / M)]
+    for i = 1 to k do
+        nextSort(buckets[i])
+    return the concatenation of buckets[1], ...., buckets[k]
+
+
