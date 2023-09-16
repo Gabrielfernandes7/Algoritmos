@@ -7,10 +7,10 @@ public class tarefa1002 {
         Scanner scanner = new Scanner(System.in);
 
         final double PI = 3.141592;
-        
+
         System.out.println("Digite o valor do raio: ");
         double raio = scanner.nextDouble();
-        
+
         double areaDoCirculo = PI * (raio * raio);
 
         System.out.print("A = " + areaDoCirculo);
