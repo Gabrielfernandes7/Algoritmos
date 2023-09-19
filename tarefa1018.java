@@ -10,14 +10,12 @@ public class tarefa1018 {
         
         System.out.print("Entre com o capital recebido: ");
         int capitalRecebido = scanner.nextInt();
-        
-        System.out.println("O valor recebido foi: " + capitalRecebido);
         System.out.println();
         
         for (int i = 0; i < cedulas.length; i++) {            
             int quantidadeNotas = capitalRecebido / cedulas[i];
             System.out.printf("%d nota(s) de R$ %d,00\n", quantidadeNotas, cedulas[i]);
-            capitalRecebido = capitalRecebido % cedulas[i]; // O que sobrou para ser trocado
+            capitalRecebido = capitalRecebido % cedulas[i];
         }
         
         scanner.close();
