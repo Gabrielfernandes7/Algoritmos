@@ -6,7 +6,6 @@ public class tarefa1036 {
         Locale.setDefault(Locale.US);
         Scanner input = new Scanner(System.in);
 
-        
         System.out.println("Digite os coeficientes dos respectivos termos para encontra as raízes da eq. de segundo grau");
         
         System.out.println("Valor a");
