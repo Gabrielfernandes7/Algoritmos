@@ -5,11 +5,11 @@ public class tarefa1038 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner input = new Scanner(System.in);
-        String vermelho = "\u001B[32m";
-        System.out.println(vermelho + " De acordo com a tabela a seguir digite o codigo do seu lanche e a quantidade desejada");
+        String amarelo = "\u001B[33m";
+        System.out.println(amarelo + "De acordo com a tabela a seguir digite o codigo do seu lanche e a quantidade desejada");
 
         Object[][] tabela = new Object[5][3];
-        
+
         /*
             [00] [01] [02]
             [10] [11] [12]
@@ -40,8 +40,22 @@ public class tarefa1038 {
         tabela[4][2] = 1.50;
 
         for (int i = 0; i < tabela.length; i++) {
-            System.out.println("\u001B[0m CODE: " + tabela[i][0] + " | Nome: " + tabela[i][1] + " | Preco: " + tabela[i][2] + "\n");
+            System.out.println(
+                    "\u001B[0m CODE: " + tabela[i][0] + " | Nome: " + tabela[i][1] + " | Preco: "
+                            + tabela[i][2] + "\n");
         }
 
+        System.out.println("Digite o numero do seu pedido");
+        int pedido = input.nextInt();
+
+        System.out.println("Digite o numero a quantidade do seu pedido");
+        int quantidade = input.nextInt();
+
+        double preco = (double) tabela[pedido - 1][2];
+        double precoTotal = (double) preco * quantidade;
+
+        System.out.println("O valor total é: " + precoTotal);
+
+        input.close();
     }
 }
