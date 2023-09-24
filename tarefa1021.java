@@ -24,12 +24,14 @@ public class tarefa1021 {
         parteFlutuante = (Math.floor(parteFlutuante * 100) / 100);
         
         System.out.println("MOEDAS:");
-        for(int i = 0; i < moedas.length; i++){
-            int quantidadeMoedas = (int) (parteFlutuante / moedas[i]); 
+        // System.out.println("%d m");
 
-            System.out.printf("%.2f moeda(s) de R$ %d centavos", quantidadeMoedas, moedas[i]);
+        for(int j = 0; j < moedas.length; j++){
+            int quantidadeMoedas = (int) (parteFlutuante / moedas[j]);
+
+            System.out.printf("%d moeda(s) de R$ %.2f centavos \n", quantidadeMoedas, moedas[j]);
             
-            parteFlutuante = parteFlutuante % moedas[i];
+            parteFlutuante = parteFlutuante % moedas[j];
         }
         
         input.close();
