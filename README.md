@@ -1,7 +1,4 @@
 # Algoritmos - Problemas Beecrowd
 
-- Exercício para fazer: Tarefa 1021 e 1035
+- Exercício para fazer: Tarefa 1039 a 1044
 
-Para fazer
-
-- Exercício [Tarefa 1037](/tarefa1037.java)
