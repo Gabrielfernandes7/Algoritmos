@@ -22,5 +22,7 @@ public class tarefa1037 {
             System.out.println("(75, 100]");
           }
         }
+
+      input.close();
     }
 }
