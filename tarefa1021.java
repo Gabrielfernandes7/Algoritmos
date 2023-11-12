@@ -24,7 +24,6 @@ public class tarefa1021 {
         parteFlutuante = (Math.floor(parteFlutuante * 100) / 100);
         
         System.out.println("MOEDAS:");
-        // System.out.println("%d m");
 
         for(int j = 0; j < moedas.length; j++){
             int quantidadeMoedas = (int) (parteFlutuante / moedas[j]);
