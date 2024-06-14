@@ -9,7 +9,6 @@ public class tarefa1047 {
         int duracaoM;
 
         System.out.println("Digite horas e minutos inicial");
-
         int hInicial = input.nextInt();
         int mInicial = input.nextInt();
 
@@ -17,19 +16,25 @@ public class tarefa1047 {
         int hFinal = input.nextInt();
         int mFinal = input.nextInt();
 
-        if (hInicial < hFinal) {
-            duracaoH = hFinal - hInicial;
+        int inicioTotalMinutos = hInicial * 60 + mInicial;
+        int finalTotalMinutos = hFinal * 60 + mFinal;
+
+        int duracaoTotalMinutos;
+
+        if (inicioTotalMinutos == finalTotalMinutos) {
+            duracaoTotalMinutos = 24 * 60;
+        } else if (inicioTotalMinutos < finalTotalMinutos) {
+            duracaoTotalMinutos = finalTotalMinutos - inicioTotalMinutos;
         } else {
-            duracaoH = (24 - hFinal) + hInicial;
+            duracaoTotalMinutos = (24 * 60 - inicioTotalMinutos) + finalTotalMinutos;
         }
 
-        if (mInicial < mFinal) {
-            duracaoM = mFinal - mInicial;
-        } else {
-            duracaoM = (mFinal + 60) - mInicial;
-        }
+        duracaoH = duracaoTotalMinutos / 60;
+        duracaoM = duracaoTotalMinutos % 60;
 
-        System.out.format("O JOGO DUROU %d HORA(S) E %d MINUTO(S)", duracaoH, duracaoM);
+        System.out.println(duracaoH);
+
+        System.out.format("O JOGO DUROU %d HORA(S) E %d MINUTO(S) \n", duracaoH, duracaoM);
 
         input.close();
     }
