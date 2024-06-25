@@ -6,20 +6,49 @@ public class tarefa1049 {
 
         String palavra1 = sc.nextLine();
         String palavra2 = sc.nextLine();
-        // String palavra3 = sc.nextLine();
+        String palavra3 = sc.nextLine();
 
-        if (palavra1 == "vertebrado") {
-            if (palavra2 == "carnívoro") {
-                
-            } else {
+        sc.close();
 
+        if (palavra1.equals("vertebrado")) {
+            if (palavra2.equals("ave")) {
+                if (palavra3.equals("carnivoro")) {
+                    System.out.println("Águia");
+                }
+
+                if (palavra3.equals("onivoro")) {
+                    System.out.println("pomba");
+                }
             }
-        } else if (palavra1 == "invertebrado"){
             
-        } else {
-            System.out.println("Entrada inválida");
+            if (palavra2.equals("mamifero")) {
+                if (palavra3.equals("onivoro")) {
+                    System.out.println("homem");
+                }
+                if (palavra3.equals("herbivoro")) {
+                    System.out.println("vaca");
+                }
+            }
         }
         
-        sc.close();
+        if (palavra1.equals("invertebrado")) {
+            if (palavra2.equals("inseto")) {
+                if (palavra3.equals("hematófago")) {
+                    System.out.println("pulga");
+                }
+                if (palavra3.equals("onivoro")) {
+                    System.out.println("lagarta");
+                }
+            }
+
+            if (palavra2.equals("anelideo")) {
+                if (palavra3.equals("hematófago")) {
+                    System.out.println("sanguessuga");
+                }
+                if (palavra3.equals("onivoro")) {
+                    System.out.println("minhoca");
+                }
+            }
+        }
     }
 }
